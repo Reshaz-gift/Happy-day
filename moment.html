@@ -4,7 +4,6 @@
 <head>
   <meta charset="UTF-8">
   <title>Happy Birthday Sweetie</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
       margin: 0;
@@ -14,15 +13,88 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      background-image: radial-gradient(circle, #2a2a2a, #000);
+      height: 100;
+      background-image:(circle, #2a2a2a, #000);
     }
 
     .cake-container {
       position: relative;
-      width: 300px;
+      width: 300;
+      height: 300;
       background: #3b2d2f;
-      border-radius: 15px;
+      border-radius: 15;
       box-shadow: 0 0 20px #990000;
       padding: 20px;
-      text-align: cente
+      text-align: center;
+    }
+
+    .cake-message {
+      font-size: 20px;
+      margin-top: 10px;
+      font-family: 'UnifrakturCook', cursive;
+      line-height: 1.4;
+    }
+
+    .candles {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-top: -20px;
+    }
+
+    .candle {
+      width: 10px;
+      height: 40px;
+      background: #ddd;
+      position: relative;
+      border-radius: 2px;
+    }
+
+    .flame {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10px;
+      height: 10px;
+      background: orange;
+      border-radius: 50%;
+      box-shadow: 0 0 10px orange;
+      animation: flicker 0.3s infinite alternate;
+    }
+
+    @keyframes flicker {
+      from { transform: translateX(-50%) scale(1); opacity: 1; }
+      to { transform: translateX(-50%) scale(1.2); opacity: 0.7; }
+    }
+
+    .wolf {
+      margin-top: 10px;
+    }
+
+    .wolf img {
+      width: 100px;
+      filter: brightness(0.8) contrast(1.2);
+    }
+  </style>
+  <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="cake-container">
+    <div class="candles">
+      <div class="candle"><div class="flame"></div></div>
+      <div class="candle"><div class="flame"></div></div>
+      <div class="candle"><div class="flame"></div></div>
+    </div>
+
+    <div class="wolf">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f8/Wolf_face.svg/256px-Wolf_face.svg.png" alt="Wolf">
+    </div>
+
+    <div class="cake-message">
+      Happy birthday sweetie<br>
+      I wish u gratefully year
+    </div>
+  </div>
+</body>
+</html>
