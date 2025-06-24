@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title> U R MY HERO </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+      font-family: 'Courier New', monospace;
+    }
+
+    .container {
+      position: relative;
+      width: 100%;
+      max-width: 768px;
+      margin: auto;
+      background: url('CEA5C6B0-1B18-4F0C-ACAC-0E03CD974512.png') no-repeat center center;
+      background-size: cover;
+      aspect-ratio: 768 / 1152;
+    }
+
+    .btn {
+      position: absolute;
+      background: rgba(0, 0, 0, 0);
+      border: none;
+      cursor: pointer;
+      width: 20%;
+      height: 6%;
+    }
+
+    .btn:active {
+      filter: brightness(1.5);
+      transform: scale(1.05);
+    }
+
+    #swing {
+      top: 58%;
+      left: 26%;
+      width: 48%;
+    }
+
+    #journey {
+      bottom: 5%;
+      left: 5%;
+    }
+
+    #moment {
+      bottom: 5%;
+      left: 27%;
+    }
+
+    #message {
+      bottom: 5%;
+      left: 49%;
+    }
+
+    #playlist {
+      bottom: 5%;
+      left: 71%;
+    }
+
+    @media (max-width: 600px) {
+      .btn {
+        height: 8%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <button class="btn" id="swing" onclick="playEffect('Swing With Me')"></button>
+  <button class="btn" id="journey" onclick="location.href='journey.html'"></button>
+  <button class="btn" id="moment" onclick="location.href='moment.html'"></button>
+  <button class="btn" id="message" onclick="location.href='message.html'"></button>
+  <button class="btn" id="playlist" onclick="location.href='playlist.html'"></button>
+</div>
+
+<audio id="click-sound" src="click.mp3" preload="auto"></audio>
+
+<script>
+  function playEffect(message) {
+    const sound = document.getElementById("click-sound");
+    if (sound) {
+      sound.currentTime = 0;
+      sound.play();
+    }
+    alert(message);
+  }
+</script>
+
+</body>
+</html>
